@@ -7,4 +7,19 @@ return {
     'christoomey/vim-tmux-navigator',
     lazy = false,
   },
+  {
+    'nathom/filetype.nvim',
+    config = function()
+      require('filetype').setup {
+        overrides = {
+          extensions = {
+            tf = 'terraform',
+            tfvars = 'terraform',
+            tfstate = 'json',
+            telekasten = 'markdown',
+          },
+        },
+      }
+    end,
+  },
 }
